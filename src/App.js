@@ -22,19 +22,13 @@ class LambdaDemo extends Component {
 
     return (
       <p>
-        {/* "Call Lambda" 버튼 */}
         <button onClick={this.handleClick("hello")}>
           {loading ? "Loading..." : "Call Lambda"}
         </button>
-
-        {/* "Call Async Lambda" 버튼 */}
         <button onClick={this.handleClick("async-dadjoke")}>
           {loading ? "Loading..." : "Call Async Lambda"}
         </button>
-        
         <br />
-        
-        {/* API 응답 메시지 */}
         <span>{msg}</span>
       </p>
     );
@@ -46,15 +40,24 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* 로고 이미지 */}
+          <nav>
+            {/* 네비게이션 바 */}
+            <ul>
+              <li>
+                <a href="/">문서</a>
+              </li>
+              <li>
+                <a href="/repository">저장소</a>
+              </li>
+              <li>
+                <a href="/developer-docs">개발자 문서</a>
+              </li>
+            </ul>
+          </nav>
           <img src={logo} className="App-logo" alt="logo" />
-
-          {/* 안내 문구 */}
           <p>
-            사이트트트<code>src/App.js</code> and save to reload.
+            사이트를 수정하고 저장하면 다시 로드됩니다.
           </p>
-
-          {/* LambdaDemo 컴포넌트 */}
           <LambdaDemo />
         </header>
       </div>
