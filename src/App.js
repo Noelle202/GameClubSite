@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import RepositoryPage from "./Repository";
 class LambdaDemo extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ class App extends Component {
                 <a href="/">문서</a>
               </li>
               <li>
-                <a href="/repository">저장소</a>
+                <a href="/repository" Component={RepositoryPage}>저장소</a>
               </li>
               <li>
                 <a href="/developer-docs">개발자 문서</a>
